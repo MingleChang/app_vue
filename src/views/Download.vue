@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>download</h1>
-    <a v-if="this.data" :href="'itms-services://?action=download-manifest&url=https://api.minglechang.com/app/plist/' + this.data.id">下载</a>
+        <el-link v-if="this.data" :href="'itms-services://?action=download-manifest&url=https://api.minglechang.com/app/plist/' + this.data.id">下载</el-link>
     </div>
 </template>
 
@@ -37,6 +37,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
