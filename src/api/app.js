@@ -7,3 +7,7 @@ export function GetAppInfo(appId) {
 export function UploadApp(data) {
     return POST('/app/upload', data)
 }
+
+export function GetPackageIds() {
+    return GET('/app/packageids', null)
+}
