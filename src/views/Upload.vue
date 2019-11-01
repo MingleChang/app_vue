@@ -1,5 +1,4 @@
 <template>
-  <div id="containter">
     <div id="uploadForm">
       <el-form ref="form" label-position="right">
         <el-form-item label="平台">
@@ -29,7 +28,6 @@
         </el-form-item>
       </el-form>
     </div>
-  </div>
 </template>
 
 <script>
@@ -78,18 +76,6 @@ export default {
 </script>
 
 <style scoped>
-#containter {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-}
 #uploadForm {
   padding: 1.5rem;
   max-width: 80%;
