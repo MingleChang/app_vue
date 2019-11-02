@@ -5,7 +5,7 @@
             <div id="platform">{{data.platform}}</div>
             <div id="environment">{{data.environment}}</div>
             <div id="version">{{data.version}}({{data.buildVersion}})</div>
-            <el-link v-if="this.data" :href="'itms-services://?action=download-manifest&url=https://api.minglechang.com/app/plist/' + this.data.id">
+            <el-link v-if="this.data" :href="'itms-services://?action=download-manifest&url=https://api.minglechang.com/app/plist/' + this.data.id" :underline="false">
             <div id="button">下载</div>
             </el-link>
         </div>
