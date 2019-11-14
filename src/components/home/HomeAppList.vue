@@ -3,12 +3,13 @@
     <li v-for="app in apps" :key="app" @click="selectedItem(app)">
       <a href="javascript:void(0);">
         <div id="title">{{app.displayName}}</div>
-        <div id="detail">{{app.createdDate}}</div>
+        <div id="detail">{{formatCreateDate(app.createdDate)}}</div>
       </a>
     </li>
   </ul>
 </template>
 <script>
+import dateFormat from 'dateformat'
 export default {
   name: "HomeAppList",
   props: {
@@ -17,6 +18,10 @@ export default {
     }
   },
   methods: {
+    formatCreateDate(createDate) {
+      var date = new Date(createDate)
+      return dateFormat(date, "yyyy年mm月dd日 HH时MM分ss秒")
+    },
     selectedItem(app) {
       this.$emit("selectedItem", app);
     }
